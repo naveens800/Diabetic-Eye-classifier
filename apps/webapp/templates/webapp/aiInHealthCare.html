@@ -1,0 +1,118 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'AiHC.css' %}">
+
+  <title>Ai in Health Care</title>
+</head>
+
+<body>
+  <video autoplay muted loop id="myVideo">
+    <source src="{% static 'videoplayback.mp4' %}" type="video/mp4">
+  </video>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Ai in Health Care</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'webapp:index' %}">Home
+              <span class="sr-only">(current)</span>
+            </a>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container back" id="contents">
+    <div class="background b-loaded b-lazy" style="background-image: url({%static 'adopt.jpg'%});"></div>
+    <div id="content">
+      <div class="row images">
+        <div class="col-sm-8">
+          <br>
+          <h1 class="display-4">Virtual Health Assistant</h1>
+          <p class="lead">Virtual Health Assistants (VHA) can proactively help patients in a number of ways. For one,
+              VHA’s can help
+              dementia patients stay on track with their prescribed medications by sending reminders. Moreover, virtual
+              health
+              assistants may give advice on treatments for common medical conditions or provide recipes for patients
+              with
+              specific diet restrictions. VHAs can also monitor patients based on data, allow doctors to engage with
+              patients
+              and pharmacies to remind patients of prescription refills and pickups, and even recommend preventive
+              health
+              screenings.</i></p>
+        </div>
+        <div class="col-sm-4"><br> <img src="{%static 'VHA.jpg'%}" style="border-radius: 8px;" class="img-fluid "></div>
+      </div>
+      <div class="row images">
+        <div class="col-sm-8">
+          <h1 class="display-4">Diagnosis</h1>
+          <p class="lead">AI has been utilized to improve medical diagnosis. For example, AI aided medical image
+              diagnosis from
+              Beijing-based artificial intelligence high-tech company, Infervison, is being used to improve reading CT
+              scans
+              and x-rays. The technology, which is used in hospitals in China, can detect suspicious lesions and nodules
+              in
+              lung cancer patients. This allows doctors to provide patients with an early diagnosis as opposed to
+              sending
+              tissue samples to a lab for analysis, thereby providing treatments earlier than usual.</i></p>
+        </div>
+        <div class="col-sm-4"><br><img src="{% static 'Diag.jpg'%}" style="border-radius: 8px;" class="img-fluid"></div>
+      </div>
+      <div class="row images">
+        <div class="col-sm-8">
+          <h1 class="display-4">Healthcare BOTs</h1>
+          <p class="lead">Bots for healthcare exist primarily for patient engagement. Healthcare bots, which are
+              found in mobile
+              messaging
+              apps, can help patients quickly and in real time simply by sending a message. Health chatbots can answer
+              health-related questions and even help patients manage medications by providing information on types of
+              medications and recommended doses.</i></p>
+        </div>
+        <div class="col-sm-4"><br><img src="{%static 'HCB.png'%}" style="border-radius: 8px;" class="img-fluid"></div>
+      </div><br>
+      <div class="row">
+        <div class="col">
+          <h1 class="display-4" id="lastone">Other artificial intelligence solutions being developed in the healthcare
+            field include:
+          </h1>
+          <ul>
+            <li>Heart sound analysis</li>
+            <li>Companion robots for the elderly</li>
+            <li>Mining medical records</li>
+            <li>Design treatment plans</li>
+            <li>Assist in repetitive jobs</li>
+            <li>Provide consultations</li>
+            <li>Drug creation</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>

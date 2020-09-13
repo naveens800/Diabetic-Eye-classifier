@@ -1,0 +1,22 @@
+{
+    "cSpell.ignoreWords": [
+        "jpg"
+    ],
+    "editor.fontSize": 18,
+    "python.pythonPath": "/media/navin/Naveen/naveen/Projects/BE-project/BEvenv/bin/python3",
+    "python.envFile": "D:\\naveen\\Projects\\BE-project\\Scripts\\python.exe",
+    //"editor.fontFamily": "Consolas, 'Menlo', monospace",
+    "cSpell.words": [
+        "imread",
+        "keras",
+        "lmodel",
+        "m",
+        "m lmodel",
+        "ndim",
+        "pyplot",
+        "scipy",
+        "sklearn"
+    ],
+    "editor.fontLigatures": true,
+    "python.formatting.provider": "yapf",
+}

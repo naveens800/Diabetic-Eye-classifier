@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="{%static 'SS.css'%}" rel="stylesheet">
+    <title>Signs and symptoms</title>
+</head>
+
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="{% static 'videoplayback.mp4' %}" type="video/mp4">
+    </video>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Signs and symptoms</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{%url 'webapp:index'%}">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container back">
+        <div class="background" style="background-image: url({%static 'SS.jpg'%});"></div><br>
+        <div class="left">Normal</div>
+        <div class="right">Diabetic retinopathy</div>
+
+        <h1 class="display-4">Signs and symptoms</h1>
+        <div class="col">
+            <p class="lead">Diabetic retinopathy often has no early warning signs. Even macular edema, which can
+                    cause rapid vision loss, may not have any warning signs for some time. In general, however, a person
+                    with macular edema is likely to have blurred vision, making it hard to do things like read or drive.
+                    In some cases, the vision will get better or worse during the day.
+            </p><br>
+            <h1 class="display-4">First stage:</h1>
+            <p class="lead">
+                
+                    The first stage, called non-proliferative diabetic retinopathy (NPDR), has no symptoms. Patients may
+                    not notice the signs and have 20/20 vision. The only way to detect NPDR is by fundus photography, in
+                    which microaneurysms (microscopic blood-filled bulges in the artery walls) can be seen. If there is
+                    reduced vision, fluorescein angiography can show narrowing or blocked retinal blood vessels clearly
+                    (lack of blood flow or retinal ischemia). <br><br>
+
+                    Macular edema, in which blood vessels leak their contents into the macular region, can occur at any
+                    stage of NPDR. Its symptoms are blurred vision and darkened or distorted images that are not the
+                    same in both eyes. Ten percent (10%) of diabetic patients will have vision loss related to macular
+                    edema. Optical Coherence Tomography can show areas of retinal thickening due to fluid accumulation
+                    from macular edema.
+                </i>
+            </p>
+            <h2 class="display-4">Second stage:</h2>
+            <p class="lead">
+                
+                    In the second stage, abnormal new blood vessels (neovascularisation) form at the back of the eye as
+                    part of proliferative diabetic retinopathy (PDR); these can burst and bleed (vitreous hemorrhage)
+                    and blur the vision, because these new blood vessels are fragile. The first time this bleeding
+                    occurs, it may not be very severe. In most cases, it will leave just a few specks of blood, or spots
+                    floating in a person's visual field, though the spots often go away after a few hours. <br>
+
+                    These spots are often followed within a few days or weeks by a much greater leakage of blood, which
+                    blurs the vision. In extreme cases, a person may only be able to tell light from dark in that eye.
+                    It may take the blood anywhere from a few days to months or even years to clear from the inside of
+                    the eye, and in some cases the blood will not clear. These types of large hemorrhages tend to happen
+                    more than once, often during sleep.
+                </i>
+            </p>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3 class="display-4">Funduscopic Exam:</h3>
+                <p class="lead">
+                    
+                        On funduscopic exam, a doctor will see cotton wool spots, flame hemorrhages, and dot-blot
+                        hemorrhages. which are the factors for a diabetic retinopathy. </i>
+                </p>
+            </div>
+            <div class="col-sm-6">
+                <div class="image"><img src="{%static 'fundus.jpeg'%}" class="img-thumbnail" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="{%static 'diag.css'%}" rel="stylesheet">
+    <title>Diagnosis</title>
+</head>
+
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="{% static 'videoplayback.mp4' %}" type="video/mp4">
+    </video>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Diagnosis</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'webapp:index' %}">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container back">
+        <div class="background"style="background-image: url({%static 'diag2.jpg'%});"></div><br>
+
+        <h1 class="display-4">Diagnosis:</h1>
+        <div class="col">
+            <p class="lead">Diabetic retinopathy is detected during an eye examination that includes:
+            </p>
+            <ul>
+                <li><strong> Visual acuity test:</strong> Visual acuity test: Uses an eye chart to measure how well a person sees at various distances (i.e.,
+                    visual acuity)</li><br>
+                <li><strong> Pupil dilation:</strong> Pupil dilation: The eye care professional places drops into the eye to dilate the pupil. This allows
+                    him or her to see more of the retina and look for signs of diabetic retinopathy. After the
+                    examination, close-up vision may remain blurred for several hours.</li><br>
+                <li><strong>Ophthalmoscopy or fundus photography:</strong> Ophthalmoscopy or fundus photography: Fundus photography involves photographing the rear of an eye;
+                    also known as the fundus. Specialized fundus cameras consisting of an intricate microscope attached
+                    to a flash enabled camera are used in fundus photography. The main structures that can be visualized
+                    on a fundus photo are the central and peripheral retina, optic disc and macula. Fundus photography
+                    can be performed with colored filters, or with specialized dyes including fluorescein and
+                    indocyanine green.[1]</li><br>
+                <li><strong>Fundus Fluorescein angiography (FFA):</strong> Fundus Fluorescein angiography (FFA): This is an imaging technique which relies on the circulation
+                    of fluorescein dye to show staining, leakage, or non-perfusion of the retinal and choroidal
+                    vasculature.</li><br>
+                <li><strong>Optical coherence tomography (OCT):</strong>Optical coherence tomography (OCT): This is an optical imaging modality based upon interference, and
+                    analogous to ultrasound. It produces cross-sectional images of the retina (B-scans) which can be
+                    used to measure the thickness of the retina and to resolve its major layers, allowing the
+                    observation of swelling.</li>
+            </ul><br>
+            <p class="lead">The eye care professional will look at the retina for early signs of the disease, such
+                    as:
+            </p>
+            <ol>
+                <li>leaking blood vessels,</li>
+                <li>retinal swelling, such as macular edema,</li>
+                <li>pale, fatty deposits on the retina (exudates) – signs of leaking blood vessels,</li>
+                <li>damaged nerve tissue (neuropathy), and</li>
+                <li>any changes in the blood vessels.</li>
+            </ol><br>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

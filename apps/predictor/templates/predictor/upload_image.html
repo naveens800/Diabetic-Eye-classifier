@@ -1,0 +1,16 @@
+{% extends 'predictor/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<br><br><br><br><br>
+<h1 class="display-3 height" style="font-size: 40px; ">Please Upload an Eye Image of Fundus Photography in format (jpg,
+    png) </h1><br>
+<form method='POST' , enctype="multipart/form-data" ,action="">
+    {% csrf_token %}
+
+    <div class="form-group" style="font-size: 30px; font-weight: 300;">{{form|linebreaks}}</div>
+    <input class="btn btn-info  btn-lg" type="submit" value="Submit">
+</form>
+
+{% endblock %}

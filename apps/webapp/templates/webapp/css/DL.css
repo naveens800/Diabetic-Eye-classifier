@@ -1,0 +1,45 @@
+@media (min-width: 1200px) {
+    .container{
+        max-width: 1400px;
+    }
+}
+
+body video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+.background {
+    background-image: url(../vendor/images/deeplearning.png);
+    height: 550px;
+    width: 100%;
+    border-radius: 15px;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-color: rgb(49, 129, 129);
+    border-width: 5px;
+}
+.back{
+        background-color: rgb(255, 255, 255);
+        opacity: 0.85;
+}
+.height{
+    font-size: xx-large;
+    font-weight: 500;
+}
+.lead{
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    font-style: italic;
+
+}

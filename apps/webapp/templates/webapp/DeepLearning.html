@@ -1,0 +1,129 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The RoLe of AI in Detecting DR</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="{%static 'DL.css'%}" rel="stylesheet">
+</head>
+
+<body>
+
+    <video autoplay muted loop id="myVideo">
+        <source src="{% static 'videoplayback.mp4' %}" type="video/mp4">
+    </video>
+    <h1>hello world</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">PixelWise</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{%url 'webapp:index'%}">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container back">
+        <div class="background b-loaded b-lazy" style="background-image: url({%static 'deeplearning.png'%});">
+        </div>
+        <div class="col">
+            <h class="display-4 height">Recognition and Classification of Diabetic Retinopathy utilizing Digital
+                Fundus Images:
+                </h1><br>
+                <img src="{%static 'diabeticRetinopathy.jpg'%}" class="col image-fluid" alt="">
+        </div>
+        <p class="lead">
+            Diabetic Retinopathy is produced by variations in blood vessels of the retina. At the
+            point when these vessels may leak blood and new vessels may develop because of blood vessels damage. Vision
+            loss or vision is impaired due to damage in nerve cells. Diabetic Retinopathy (DR) may progress in following
+            types: <br><br>
+            <ul>
+                <li class="lead">No Diabetic retinpathy (NPDR)</li>
+                <li class="lead">mild</li>
+                <li class="lead">moderate</li>
+                <li class="lead">severe</li>
+                <li class="lead">Proliferative</li>
+            </ul>
+            <p class="lead"> In gentle NPDR, stages, for example, microaneurysms, dot and blot hemorrhages
+                and hard/intra-retinal exudates are found in the retinal pictures. Microaneurysms (MH) are clinically
+                first
+                recognized injuries. It is little zones of inflatable -like swelling on the mass of the retina. Which is
+                round in shape and dark red spot appears in the retinal capillaries in the inner nuclear layer of the
+                retina. MH size is normally ranges from 20 to 200 microns i.e., 1:12th diameter of an average optic
+                disc. <br> <br>
+                Hemorrhages are generally located on the center layer of the retina. Retinal hemorrhages are main cause
+                of
+                the retinal disease or injury, noticeable in dark surrounded in the form of patches. Hemorrhages are
+                namely,
+                Flame and dot-blot hemorrhages. All things considered the spot and smear type is peculiar leakingof the
+                veins in retina. It is appear similar like microaneurysms if they are small. Flame hemorrhages or flame
+                shaped hemorrhages occur in the nerve fibers and they occur more in superficial nerve fiber layer it
+                appear
+                in the inner layer of the retina. <br><br> Cotton wool spot (CWS) is soft white patches around the
+                retina near the
+                optic disc and abnormal finding on fundoscopic exam in the retina. CWS are acute signs of vascular
+                insufficiency to an area of retina. The most widely recognized side effects related with retinal cotton
+                wool
+                spot (CWS) can incorporate scotoma, arcuate imperfections, obscured vision, and amaurosis fugax.</p>
+        </p>
+        <div class="col">
+            <h1 class="display-4 height">How the system learns:</h1><br>
+            <p class="lead">
+                The math­ematical algorithm is based on deep machine learning, a type of artificial intelligence (AI)
+                technology in which a neural network “learns” to perform a task through repetition and self-correction.
+            </p>
+            <p class="lead">
+                In this case, the computerized algorithm was trained with 3662 human-graded
+                fundus images that showed varying levels of diabetic retinal disease. Then for each image the
+                severity grade given by the [algorithm] is compared with the known grade from the training set, and
+                parameters are then modified slightly to decrease the error on that image.<br> This process
+                is repeated for every image in the training set many times over, and the [algo­rithm] ‘learns’ how to
+                accurately com­pute the diabetic retinopathy severity from the pixel intensities of the image for all
+                images in the training set.
+            </p>
+            <div class="card">
+                <div class="card-header" style="background: rgb(2,0,36);
+                background: linear-gradient(90deg, rgba(2,0,36,1) 22%, rgba(108,160,214,1) 98%);">
+                    <strong style="color: aliceblue;">Predict</strong>
+                </div>
+                <div class="card-body" style="background: rgb(2,0,36);
+                background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(163,222,247,1) 88%);">
+                    <h5 class="card-title" style="color: aliceblue;">Predict Early Eye Blindness by Diabetic retinopathy
+                    </h5>
+                    <p class="card-text" style="color: aliceblue;">Diabetic retinopathy is an eye condition that can
+                        cause vision loss and blindness in people who have diabetes.</p>
+                    <a href="{%url 'predictor:Patient_form'%}" class="btn btn-primary">Proceed</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+
+</body>
+
+</html>

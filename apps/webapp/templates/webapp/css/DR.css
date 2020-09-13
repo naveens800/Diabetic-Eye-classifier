@@ -1,0 +1,75 @@
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1400px;
+    }
+}
+.background {
+    background-image: url(../vendor/images/DR.jpg);
+    height: 550px;
+    width: 100%;
+    border-radius: 15px;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-color: rgb(49, 129, 129);
+    border-width: 5px;
+}
+.lead{
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+
+}
+
+
+body video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+
+  }
+.back{
+    background-color: rgb(241, 238, 238);
+    opacity: 0.85;
+}
+.display-4{
+    font-size: 44px;
+    text-decoration:underline;
+}
+.zoom {
+    transition: transform .2s;
+    width: 450px;
+    height: 500px;
+  }
+.zoom:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+
+  } 
+#NPDR{
+    position: absolute;
+    bottom: 365px;
+    left: 150px;
+    color: rgb(0, 0, 0);
+    font-size: larger;
+
+}
+#PDR{
+    position: absolute;
+    bottom: 25px;
+    left: 170px;
+    color: black;
+    font-size: larger;
+
+}
+
+  

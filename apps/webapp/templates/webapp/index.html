@@ -1,0 +1,153 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Menu</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+  <!-- Custom styles for this template -->
+  <link href="{%static 'heroic-features.css'%}" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">PixelWise</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <video autoplay muted loop id="myVideo">
+    <source src="{% static 'videoplayback.mp4' %}" type="video/mp4">
+  </video>
+
+
+
+  <!-- Page Content -->
+  <div class="container back">
+
+    <!-- Jumbotron Header -->
+    <header class="jumbotron my-4"
+      style="background-image: url(https://images.pond5.com/futuristic-technology-abstract-background-beautiful-footage-087637123_prevstill.jpeg); opacity: 0.9;">
+      <h1 class="display-3">AI In Health Care!</h1>
+      <p class="lead">Artificial intelligence (AI) in healthcare is the use of complex algorithms and software to
+        emulate human cognition in the analysis of complicated medical data. Specifically, AI is the ability of computer
+        algorithms to approximate conclusions without direct human input.</p>
+      <a href="{% url 'webapp:AiHC'%}" class="btn btn-primary btn-lg">Learn more</a>
+    </header>
+
+    <!-- Page Features -->
+    <div class="row text-center" id="cards">
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100 cardcolor">
+          <img class="card-img-top img-thumbnail" style="width: 500px; height: 325px;" src="{% static 'DRcard.jpg' %}"
+            alt="">
+          <div class="card-body">
+            <h4 class="card-title">What is diabetic retinopathy</h4>
+            <p class="card-text">Diabetic retinopathy, also known as diabetic eye disease, is a medical condition in
+              which damage occurs to the retina due to diabetes mellitus. It is a leading cause of blindness in
+              developed countries.</p>
+          </div>
+          <div class="card-footer">
+            <a href="{% url 'webapp:DbR' %}" class="btn btn-primary">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100 cardcolor">
+          <img class="card-img-top img-thumbnail" src="{% static 'sscard.jpg' %}" style="width: 500px; height: 325px;"
+            alt="">
+          <div class="card-body">
+            <h4 class="card-title">Signs and symptoms</h4>
+            <p class="card-text">Diabetic retinopathy typically presents no symptoms during the early stages.The
+              condition is often at an advanced stage when symptoms become noticeable. On occasion, the only detectable
+              symptom is a sudden and complete loss of vision.</p>
+          </div>
+          <div class="card-footer">
+            <a href="{% url 'webapp:Signs' %}" class="btn btn-primary">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100 cardcolor">
+          {% load static %}
+          <img class="card-img-top img-thumbnail" src="{%static 'diagcard.jpg'%}" style="width: 500px; height: 325px;"
+            alt="">
+          <div class="card-body">
+            <h4 class="card-title">Diagnosis</h4>
+            <p class="card-text">Diabetic retinopathy is best diagnosed with a comprehensive dilated eye exam. For this
+              exam, drops placed in your eyes widen (dilate) your pupils to allow your doctor to better view inside your
+              eyes. </p>
+          </div>
+          <div class="card-footer">
+            <a href="{% url 'webapp:diagnosis'%}" class="btn btn-primary">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100 cardcolor">
+          <img class="card-img-top img-thumbnail" style="width: 500px; height: 325px;" src="{% static 'aicard.jpg' %}"
+            alt="">
+          <div class="card-body">
+            <h4 class="card-title"> The Role of Artificial Intelligence in Detecting Diabetic Retinopathy</h4>
+            <p class="card-text">Diabetic retinopathy is an ever-increasing problem. Early screening and timely
+              treatment of the same can reduce the burden of sight threatening retinopathy.</p>
+          </div>
+          <div class="card-footer">
+            <a href="{% url 'webapp:deeplearning'%}" class="btn btn-primary">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+
+</body>
+
+</html>

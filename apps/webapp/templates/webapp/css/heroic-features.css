@@ -1,0 +1,55 @@
+@media (min-width: 1200px) {
+  .container{
+      max-width: 1500px;
+  }
+}
+body video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  
+ 
+}
+
+.display-3,.lead{
+  color: rgb(255, 255, 255);
+}
+.jumbotron my-4 {
+background-position: top;
+background-image: url(../vendor/images/ai.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+bottom: 0;
+left: 0;
+overflow: hidden;
+position: relative;
+right: 0;
+top: 0;
+z-index: 0;
+
+}
+#cards{
+  opacity: 0.86;
+  width: 1500px;
+  
+}
+.cardcolor{
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(85, 136, 165);
+}
+.back{
+  background-color: rgb(153, 169, 173);
+  opacity: 0.9;
+}
+.lead{
+  font-size: x-large;
+}

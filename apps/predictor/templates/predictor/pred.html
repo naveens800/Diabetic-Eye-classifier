@@ -1,0 +1,71 @@
+{% extends 'predictor/base.html' %}
+{% load static %}
+
+{% block styles %}
+
+    <link href="{% static 'pred.css' %}" type="text/css" rel="stylesheet">
+
+{% endblock %}
+
+{% block content %}<br><br><br>
+{% block scripts %}
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+{% endblock %}
+<div class="row">
+    <div class="col-6">
+        <h1>{{filename}}</h1><br>
+        <!-- <img src='{{filePathName}}' alt=""> -->
+        <img src="{{ filePathName }}" style="height: 350px;"class="img-thumbnail zoom" alt="" width="300" height="300" />
+    </div>
+    <div class="col-6 img-thumbnail border border-dark" style="height: auto;">
+        <h1>Probabilities</h1><br>
+        {% autoescape off %}
+        {{ plt_div|safe  }}
+        {% endautoescape %}
+    </div>
+    
+</div>
+
+<div class="row">
+    <p>
+       
+        {%if label == 4%}
+        <h3 class="lead bold">If you have proliferative diabetic retinopathy you'll need prompt surgical treatment.
+            Depending on the specific problems with your retina, options may include</h3>
+        <ul type='square'>
+            <li class="lead">Vitrectomy is a surgical procedure undertaken by a specialist where the vitreous humor gel that fills
+                the eye cavity is removed to provide better access to the retina. This allows for a variety of repairs,
+                including the removal of scar tissue, laser repair of retinal detachments and treatment of macular
+                holes.</li>
+            <li class="lead">Photocoagulation. The use of a laser beam or other intense light source to coagulate and destroy or
+                fuse small areas of tissue, especially in the retina.</li>
+            <li class="lead">Panretinal Photocoagulation (PRP) is a type of laser treatment for the eye. It is used in people who
+                have developed new abnormal blood vessels at the back of the eye in the retina or in the drainage system
+                within the eyeball.</li>
+        </ul>
+
+        {%endif%}
+
+        {%if label < 4 and label > 0 %}
+        <p class="lead">If you have mild or moderate nonproliferative diabetic retinopathy, you may not need treatment right away.
+            However, your eye doctor will closely monitor your eyes to determine when you might need treatment. <br>
+
+            Work with your diabetes doctor (endocrinologist) to determine if there are ways to improve your diabetes
+            management. When diabetic retinopathy is mild or moderate, good blood sugar control can usually slow the
+            progression.</p>
+
+        {%endif%}
+        {%if label == 0%}
+        <p class="lead">
+            This Subject doesn't shows any symptoms like abnormal growth of blood vessels, hemmorrhages, aneurysm,
+            cotton wool spots, and hard exudates hence the model classifies this subject as No DR(No Diabetic
+            Retinopathy)
+        </p>
+        {%endif%}
+
+
+
+    </p>
+</div>
+
+{% endblock %}
