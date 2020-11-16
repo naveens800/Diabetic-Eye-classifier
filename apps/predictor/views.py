@@ -11,11 +11,6 @@ import pandas as pd
 import io
 import tensorflow as tf
 tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
-
-
-
-
-
 from django.urls import reverse
 from django.core.files.storage import FileSystemStorage
 from django.http import JsonResponse,HttpResponseRedirect,HttpResponse
@@ -45,7 +40,6 @@ def accept_details(request):
     context = {'form':form}
     return render(request,'predictor/accept_details.html',context)
 
-
 def upload_image(request):
     # If image is uploaded & recieved by server
     if request.method=='POST':
@@ -70,9 +64,6 @@ def upload_image(request):
             data = pd.DataFrame(zip(fiveProbs,labels),columns=['fiveProbs','labels'])
             fig = px.funnel(data, x='fiveProbs', y='labels')
             plt_div = plot(fig, output_type='div',include_plotlyjs=False)
-
-
-
         context={
             'filePathName':filePathName,
             'filename':fileObj.name,
@@ -86,16 +77,6 @@ def upload_image(request):
         context = {'form':form}
         return render(request,'predictor/upload_image.html',context)
     
-
-
-
-
-
-
-
-
-
-
 
 def preprocess_image(image_path, desired_size=IMG_SIZE):
     im = load_ben_color(image_path,sigmaX = 30)
